@@ -1,0 +1,32 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
+import type { RouteObject } from "react-router";
+import ColorExplorer from "./pages/ColorExplorer";
+import Authentication from "./pages/Authentication";
+import ContactForm from "./pages/ContactForm";
+import CopyToClipboard from "./pages/CopyToClipboard";
+
+export const DATA: RouteObject[] = [
+  {
+    path: '/color-explorer',
+    element: <ColorExplorer />,
+  },
+  {
+    path: '/authentication',
+    element: <Authentication />,
+  },
+  {
+    path: '/contact-form',
+    element: <ContactForm />,
+  },
+  {
+    path: '/copy-to-clipboard',
+    element: <CopyToClipboard />,
+  },
+];
+
+export const getTitle = (str: string) =>
+  str
+    .replace(/^\//, '')                 // remove leading slash
+    .replace(/-/g, ' ')                 // replace hyphens with spaces
+    .replace(/\b\w/g, c => c.toUpperCase()); // capitalize each word
