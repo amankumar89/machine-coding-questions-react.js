@@ -9,16 +9,18 @@ const ColorExplorer = () => {
     const [colorData, setColorData] = useState({
         name: '',
         hex: '',
+        error: false,
     });
 
     function handleClick() {
         const colorName = inputRef.current!.value!;
         const hex = colorNameToHex(colorName);
-
+        const error = hex === undefined;
         setColorData((prev) => ({
             ...prev,
             name: colorName,
             hex,
+            error,
         }))
     }
 
@@ -45,7 +47,7 @@ const ColorExplorer = () => {
 
                 </div>
                 {/* bottom container */}
-                {colorData.name ? (
+                {colorData.hex && !colorData.error && (
                     <div className="grid place-items-center bg-white rounded-md my-4 py-8">
                         <div className="w-36 h-36 rounded-full" style={{
                             background: colorData?.hex
@@ -57,7 +59,16 @@ const ColorExplorer = () => {
                             <strong>Hex:</strong><span>{` ${colorData.hex}`}</span>
                         </div>
                     </div>
-                ) : null}
+                )}
+
+                {colorData.error && (
+                    <div className="grid place-items-center my-4 py-8">
+
+                        <p className="text-red-500">
+                            Sorry, I couldn't recognise that color.
+                        </p>
+                    </div>
+                )}
 
             </div>
         </Layout>
