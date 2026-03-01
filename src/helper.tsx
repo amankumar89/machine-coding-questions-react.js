@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 import type { RouteObject } from "react-router";
-import ColorExplorer from "./pages/ColorExplorer";
-import Authentication from "./pages/Authentication";
-import ContactForm from "./pages/ContactForm";
-import CopyToClipboard from "./pages/CopyToClipboard";
+import ColorExplorer from "./modules/ColorExplorer";
+import Authentication from "./modules/Authentication";
+import ContactForm from "./modules/ContactForm";
+import CopyToClipboard from "./modules/CopyToClipboard";
 
 export const DATA: RouteObject[] = [
   {
