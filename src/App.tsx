@@ -7,7 +7,7 @@ const App = () => {
     <Layout title="Machine Coding Questions">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {DATA.map((feature, index) => (
-          <FeatureCard count={index + 1} {...feature} />
+          <FeatureCard key={feature.path} count={index + 1} {...feature} />
         ))}
       </div>
     </Layout>
