@@ -19,7 +19,7 @@ A collection of **interview-style React challenges** — each implemented as a s
 
 ## Tech Stack
 
-- **React ** · **TypeScript** · **Vite** · **Tailwind CSS v4** · **React Router**
+- **React** · **TypeScript** · **Vite** · **Tailwind CSS v4** · **React Router**
 
 ---
 
